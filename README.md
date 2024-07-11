@@ -1,19 +1,31 @@
-# LSTMTimeSeriesForecasting
-This repository contains code for building, training, and evaluating an LSTM (Long Short-Term Memory) model for time series forecasting. The project is implemented in Python using libraries such as Pandas, Scikit-learn, TensorFlow, and Matplotlib.
+# LSTM Stock Price Analysis
 
+## Overview
 
-# Introduction
-Time series forecasting is a crucial task in various domains such as finance, weather forecasting, stock market analysis, and more. This project demonstrates how to use an LSTM neural network to predict future values in a time series dataset.
+This repository contains an LSTM model for analyzing and predicting stock prices. The project is organized into several directories and files that handle data preprocessing, model training, evaluation, and prediction.
 
-# Usage
-Follow these steps to use the code in this repository:
+## Repository Structure
 
-Prepare the Data: Place your time series data in the data directory or modify the Data class to read from your source.
-Train the Model: Use the LSTMTrainer class to train your LSTM model.
-Evaluate the Model: Use the provided methods to evaluate the model's performance.
-Visualize the Results: Generate plots to visualize the actual vs. predicted values.
+- **Data/**: Contains all the CSV datasets used for training and testing the model.
+- **Core/**:
+  - `data.py`: Handles data preprocessing tasks, including reading CSV files, cleaning data, and preparing it for model training.
+  - `model.py`: Contains the LSTM model architecture, training routines, and evaluation functions.
+- **PreTrainedModel/**: Stores all the trained models.
+- `run.py`: The main script that orchestrates the data preprocessing, model training, and evaluation by calling functions from `data.py` and `model.py`.
 
+## Getting Started
 
-# Dataset
-Ensure all dataset is in a CSV format with a Date column and at least one feature column, such as Close for stock prices. Place your dataset in the data directory.
+### Prerequisites
 
+Ensure you have the following packages installed:
+
+- Python 3.x
+- TensorFlow
+- NumPy
+- Pandas
+- Scikit-learn
+
+You can install the required packages using the following command:
+
+```bash
+pip install tensorflow numpy pandas scikit-learn
