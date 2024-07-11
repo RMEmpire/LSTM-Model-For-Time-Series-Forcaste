@@ -5,7 +5,7 @@ from Core.model import StockPricePredictor
 #data.py file calls
 
 data = Data()
-data.read('Data/AAKASH.csv')
+data.read('Data/5PAISA.csv')
 data.check_null_values()
 data.clean_data()
 print(Column.OPEN.value)

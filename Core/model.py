@@ -45,7 +45,7 @@ class StockPricePredictor:
         X_train = X_train.reshape((len(X_train), sequence_length, 1))
         X_test = X_test.reshape((len(X_test), sequence_length, 1))
 
-    def train_model(self, epochs=50, batch_size=32):
+    def train_model(self, epochs=200, batch_size=32):
         """Trains the LSTM model."""
         global X_train, y_train
         history = self.model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, verbose=2)
